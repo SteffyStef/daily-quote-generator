@@ -1,8 +1,8 @@
 const quotes = [
-  "The best way to get started is to quit talking and begin doing. — Walt Disney",
-  "Success is not in what you have, but who you are. — Bo Bennett",
-  "Don’t let yesterday take up too much of today. — Will Rogers",
-  "Do what you can with all you have, wherever you are. — Theodore Roosevelt"
+  'The best way to get started is to quit talking and begin doing. — Walt Disney',
+  'Success is not in what you have, but who you are. — Bo Bennett',
+  'Don’t let yesterday take up too much of today. — Will Rogers',
+  'Do what you can with all you have, wherever you are. — Theodore Roosevelt',
 ];
 
 function getQuote() {

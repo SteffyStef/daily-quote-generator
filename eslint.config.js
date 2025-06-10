@@ -1,33 +1,38 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+// eslint.config.js
+import js from '@eslint/js';
+import globals from 'globals';
+import pluginReact from 'eslint-plugin-react';
+import { defineConfig } from 'eslint/config';
 
-export default [
-  { ignores: ['dist'] },
+export default defineConfig([
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+      },
       parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
     plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      react: pluginReact, // ✅ plugin object, not string
     },
     rules: {
-      ...js.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      // ✅ Modern JSX support — no need to import React
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-no-target-blank': 'warn',
+      'react/prop-types': 'off', // Optional: turn off if not using prop-types
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
-]
+]);
