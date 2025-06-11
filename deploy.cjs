@@ -1,26 +1,32 @@
 const path = require('path');
 const ghpages = require('gh-pages');
 
+// Absolute path to your local repo
+const repoPath = path.resolve(__dirname);
+
 ghpages.publish(
-  path.join(__dirname, 'dist'),
+  path.join(repoPath, 'dist'), // <- folder to publish
   {
-    branch: 'gh-pages',
     repo: 'https://github.com/SteffyStef/daily-quote-generator.git',
-    message: '🚀 Deploy to GitHub Pages',
+    branch: 'gh-pages',
     dotfiles: true,
+    message: '🚀 Deploy from Windows',
     user: {
       name: 'SteffyStef',
-      email: 'snsteph82@gmail.com'
-    }
+      email: 'snsteph82@gmail.com',
+    },
   },
-  (err) => {
+  function (err) {
     if (err) {
       console.error('❌ Deployment failed:', err);
     } else {
-      console.log('✅ Successfully deployed!');
+      console.log('✅ Deployed successfully to GitHub Pages!');
     }
   }
 );
+
+
+
 
 
 
