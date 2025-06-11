@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "node ./node_modules/vitest/vitest.mjs run --reporter=verbose --outputFile=vitest-report/results.txt",
-    "lint": "npx eslint . --fix",
+    "lint": "eslint . --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "predeploy": "npm run build",
