@@ -29,9 +29,3 @@ jobs:
 
       - name: Run Prettier
         run: npm run format:check
-
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v3
-        with:
-          name: vitest-results
-          path: vitest-report/
