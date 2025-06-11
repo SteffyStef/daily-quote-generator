@@ -12,8 +12,9 @@
   "format": "prettier . --write",
   "format:check": "prettier . --check",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+  "deploy": "node deploy.cjs"
 },
+
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
