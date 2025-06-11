@@ -1,9 +1,7 @@
-name: Run Vitest
+name: CI + Deploy
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
 
 jobs:
@@ -11,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Run Vitest
-        run: npm run test
+        run: node ./node_modules/vitest/vitest.mjs run --reporter=verbose --outputFile=vitest-report/results.txt
 
       - name: Run Linter
         run: npm run lint
@@ -35,3 +34,6 @@ jobs:
         with:
           name: vitest-results
           path: vitest-report/
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
