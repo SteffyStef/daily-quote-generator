@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run --reporter=verbose --outputFile=vitest-report/results.txt",
+    "test": "npx vitest run --reporter=verbose --outputFile=vitest-report/results.txt",
     "lint": "eslint .",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
