@@ -1,7 +1,7 @@
 # 📜 Quote Generator
 
 ![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4?logo=prettier&style=flat-square)
-![Build](https://github.com/YOUR_USERNAME/quote-generator/actions/workflows/test.yml/badge.svg)
+![Build](https://github.com/SteffyStef/daily-quote-generator/actions/workflows/test.yml/badge.svg)
 
 A simple daily quote generator built with **React + Vite**. This app displays a random inspirational quote each time you load or refresh it. It includes unit testing with Vitest, linting with ESLint, and formatting with Prettier — all automated via GitHub Actions.
 
@@ -9,12 +9,12 @@ A simple daily quote generator built with **React + Vite**. This app displays a 
 
 ## 🚀 Features
 
-- 🎯 Random quote generator
-- ⚛️ Built with React and Vite
-- 🧪 Unit tests with Vitest
-- 🧹 Linting with ESLint
-- 💅 Auto-formatting with Prettier
-- 🤖 CI/CD with GitHub Actions
+- 🎯 Random quote generator  
+- ⚛️ Built with React and Vite  
+- 🧪 Unit tests with Vitest  
+- 🧹 Linting with ESLint  
+- 💅 Auto-formatting with Prettier  
+- 🤖 CI/CD with GitHub Actions  
 
 ---
 
@@ -23,7 +23,6 @@ A simple daily quote generator built with **React + Vite**. This app displays a 
 ### Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/quote-generator.git
-cd quote-generator
+git clone https://github.com/SteffyStef/daily-quote-generator.git
+cd daily-quote-generator
 npm install
-```
